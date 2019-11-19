@@ -2,7 +2,7 @@ service: mercury
 
 provider:
   name: aws
-  runtime: nodejs8.10
+  runtime: nodejs12.x
   profile: default
   region: eu-west-1
 
@@ -15,6 +15,7 @@ custom:
 functions:
   parser:
     handler: src/mercury-parser.default
+    description: Mercury parser
     timeout: 10
     memorySize: 512
     events:
